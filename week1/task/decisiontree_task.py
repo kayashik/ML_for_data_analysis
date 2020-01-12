@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Dec 13 21:12:54 2015
+Created on Sun Dec 13 16:35 2020
 
-@author: ldierker
+@author: my, myself and I
 """
 
 # -*- coding: utf-8 -*-
@@ -29,21 +29,18 @@ Data Engineering and Analysis
 """
 #Load the dataset
 
-AH_data = pd.read_csv("tree_addhealth.csv")
+AH_data = pd.read_csv("breast-cancer.csv")
 data_clean = AH_data.dropna()
 data_clean.describe()
-
 """
 Modeling and Prediction
 """
 #Split into training and testing sets
 
-predictors = data_clean[['BIO_SEX','HISPANIC','WHITE','BLACK','NAMERICAN','ASIAN',
-'age','ALCEVR1','ALCPROBS1','marever1','cocever1','inhever1','cigavail','DEP1',
-'ESTEEM1','VIOL1','PASSIST','DEVIANT1','SCHCONN1','GPA1','EXPEL1','FAMCONCT','PARACTV',
-'PARPRES']]
+predictors = data_clean[['age','menopause','tumor-size','inv-nodes','node-caps','deg-malig',
+'breast','breast-quad','irradiat']]
 
-targets = data_clean.TREG1
+targets = data_clean.recurrenceEvents
 
 pred_train, pred_test, tar_train, tar_test = train_test_split(predictors, targets, test_size=.4)
 
@@ -61,7 +58,7 @@ tree.export_graphviz(classifier, out_file=out)
 
 graph=pydotplus.graph_from_dot_data(out.getvalue())
 
-#Image(graph.create_png())
+Image(graph.create_png())
 
 graph.write_pdf("result.pdf")
 
