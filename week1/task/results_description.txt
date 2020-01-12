@@ -1,0 +1,5 @@
+    According to received results thi biggest chance that cancer will have recurrence events is when it's 3 degree of
+malignancy, there is node caps, but number of of axillary lymph nodes higher than 6.
+    In the other side for patients that have 1 or 2  degree of malignancy and tumor size is less than 16 mm and cancer
+have place on the left or right-up side of breast risk of cancer recurrence is low. And it is even lower when only
+left-up side was touched ba cancer and patient doesn't have menopause.
