@@ -1,20 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Dec 13 16:35 2020
+Created on Sun Dec 13 21:12:54 2015
 
-@author: my, myself and I
+@author: ldierker
 """
 
 # -*- coding: utf-8 -*-
 
-from pandas import Series, DataFrame
 import pandas as pd
-import numpy as np
-import os
-import matplotlib.pylab as plt
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report
 import sklearn.metrics
 #Displaying the decision tree
 from sklearn import tree
@@ -29,18 +24,21 @@ Data Engineering and Analysis
 """
 #Load the dataset
 
-AH_data = pd.read_csv("breast-cancer.csv")
+AH_data = pd.read_csv("../../tree_addhealth.csv")
 data_clean = AH_data.dropna()
 data_clean.describe()
+
 """
 Modeling and Prediction
 """
 #Split into training and testing sets
 
-predictors = data_clean[['age','menopause','tumor-size','inv-nodes','node-caps','deg-malig',
-'breast','breast-quad','irradiat']]
+predictors = data_clean[['BIO_SEX','HISPANIC','WHITE','BLACK','NAMERICAN','ASIAN',
+'age','ALCEVR1','ALCPROBS1','marever1','cocever1','inhever1','cigavail','DEP1',
+'ESTEEM1','VIOL1','PASSIST','DEVIANT1','SCHCONN1','GPA1','EXPEL1','FAMCONCT','PARACTV',
+'PARPRES']]
 
-targets = data_clean.recurrenceEvents
+targets = data_clean.TREG1
 
 pred_train, pred_test, tar_train, tar_test = train_test_split(predictors, targets, test_size=.4)
 
