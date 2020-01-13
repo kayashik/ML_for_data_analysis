@@ -1,0 +1,9 @@
+Random forest analysis was performed to evaluate the importance of a series of explanatory variables in predicting a
+binary, categorical response variable. The following explanatory variables were included as possible contributors to a
+random forest evaluating breast cancer recurrence age, menopause, tumor size, number (range 0 - 39) of axillary lymph
+nodes, Node caps, Degree of malignancy, Breast, Breast quadrant, Irradiation.
+
+The explanatory variables with the highest relative importance scores were tumor size, Degree of malignancy, Breast
+quadrant, age and number of axillary lymph nodes. The accuracy of the random forest was 75%, with the subsequent growing
+of multiple trees rather than a single tree, adding 10% to the overall accuracy of the model, and suggesting that
+interpretation of a 23 decision tree may be appropriate.
