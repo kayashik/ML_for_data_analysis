@@ -1,0 +1,16 @@
+A lasso regression analysis was conducted to identify a subset of variables from a pool of 9 categorical and
+quantitative predictor variables that best predicted a quantitative response variable measuring breast cancer
+recurrence. Categorical predictors included age, menopause, tumor size, number (range 0 - 39) of axillary lymph nodes,
+Degree of malignancy, breast side and Breast quadrant to improve interpretability of the selectedmodel with fewer
+predictors. Binary substance use variables were measured with individual questions about whether the patients have node
+caps and used a radiation therapy.
+
+Data were randomly split into a training set that included 70% of the observations and a test set that included
+30% of the observations. The least angle regression algorithm with k=5 fold cross validation was used to
+estimate the lasso regression model in the training set, and the model was validated using the test set. The change in
+the cross validation average (mean) squared error at each step was used to identify the best subset of predictor
+variables.
+
+Of the 9 predictor variables, 4 were retained in the selected model. During the estimation process, Degree of malignancy
+and node caps were most strongly associated with breast cancer recurrence, followed by tumor size and number of axillary
+lymph nodes. All of this variables were positively associated with sbreast cancer recurrence.
