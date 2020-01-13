@@ -1,0 +1,20 @@
+A k-means cluster analysis was conducted to identify underlying subgroups of adolescents based on their similarity of
+responses on 9 variables that represent characteristics that could have an impact breast cancer recurrence. Clustering
+variables included two binary variables measuring whether or not the patients have node caps and used or not a radiation
+therapy, as well as quantitative variables measuring age, menopause, tumor size, number (range 0 - 39) of axillary lymph
+nodes, Degree of malignancy, breast side and Breast quadrant. All clustering variables were standardized to have a mean
+of 0 and a standard deviation of 1.
+
+Data were randomly split into a training set that included 70% of the observations  and a test set that included 30% of
+the observations. A series of k-means cluster analyses were conducted on the training data specifying k=1-5 clusters,
+using Euclidean distance. The variance in the clustering variables that was accounted for by the clusters (r-square) was
+plotted for each of the five cluster solutions in an elbow curve to provide guidance for choosing the number of clusters
+to interpret. (myplot2.png)
+
+The elbow curve was inconclusive, suggesting that the 2-cluster solutions might be interpreted. The results below are
+for an interpretation of the 2-cluster solution.
+
+Canonical discriminant analyses was used to reduce the 5 clustering variable down a few variables that accounted for
+most of the variance in the clustering variables. A scatterplot of the first two canonical variables by cluster
+indicated that the observations in clusters 1 and 2 dont not overlap very much with each other. Cluster 2 was generally
+distinct, but the observations had greater spread suggesting higher within cluster variance.

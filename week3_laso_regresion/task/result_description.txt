@@ -13,4 +13,4 @@ variables.
 
 Of the 9 predictor variables, 4 were retained in the selected model. During the estimation process, Degree of malignancy
 and node caps were most strongly associated with breast cancer recurrence, followed by tumor size and number of axillary
-lymph nodes. All of this variables were positively associated with sbreast cancer recurrence.
+lymph nodes. All of this variables were positively associated with breast cancer recurrence.
